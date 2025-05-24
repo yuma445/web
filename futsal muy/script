@@ -1,0 +1,61 @@
+let currentIndex = 0;
+const images = [
+'image1.jpg',
+'image2.jpg',
+'image3.jpg',
+'image4.jpg',
+'image5.jpg',
+'image6.jpg',
+'image7.jpg',
+'image8.jpg',
+'image9.jpg',
+'image10.jpg'
+];
+
+function changeImage() {
+    const sliderImage = document.getElementById('sliderImage');
+    currentIndex = (currentIndex + 1) % images.length;
+    sliderImage.src = images[currentIndex];
+}
+
+setInterval(changeImage, 5000); // Cambiar imagen cada 5 segundos
+
+function toggleMenu() {
+    const menuItems = document.getElementById('menuItems');
+    menuItems.style.display = menuItems.style.display === 'block' ? 'none' : 'block';
+}
+
+function loadPage(page) {
+    const pageContent = document.getElementById('pageContent');
+
+    // Aquí puedes cargar el contenido correspondiente a cada página
+    switch (page) {
+        case 'equipos':
+            pageContent.innerHTML = '<h2>Equipos</h2><p>Aquí aparecerán los equipos.</p>';
+            break;
+        case 'calendario':
+            pageContent.innerHTML = '<h2>Calendario</h2><p>Aquí aparecerán los próximos partidos.</p>';
+            break;
+        case 'torneo':
+            pageContent.innerHTML = '<h2>Torneo</h2><p>Aquí aparecerán las estadísticas del torneo.</p>';
+            break;
+        case 'historico':
+            pageContent.innerHTML = '<h2>Histórico</h2><p>Aquí aparecerá la historia de la copa.</p>';
+            break;
+        case 'noticias':
+            pageContent.innerHTML = '<h2>Noticias</h2><p>Aquí aparecerán las noticias.</p>';
+            break;
+        default:
+            pageContent.innerHTML = '<h2>Bienvenido</h2>';
+            break;
+    }
+
+    // Cambiar estilo del menú
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => item.classList.remove('active'));
+    
+    const activeItem = Array.from(menuItems).find(item => item.textContent.toLowerCase() === page);
+    if (activeItem) {
+        activeItem.classList.add('active');
+    }
+}

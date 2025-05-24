@@ -1,0 +1,35 @@
+
+
+.menu {
+    width: 450px; /* Ajusta este valor para cambiar el ancho del menú */
+    height: 200vh; /* Asegúrate de que ocupe toda la altura de la ventana */
+    position: fixed; /* Para que se mantenga en su lugar al hacer scroll */
+    overflow-y: auto; /* Permite desplazamiento si hay mucho contenido */
+}
+
+.content {
+    margin-left: 370px; /* Asegúrate de que el contenido principal no esté detrás del menú */
+    padding: 20px;
+}
+
+/* Efecto de hover para los elementos del menú */
+.menu-item {
+    padding: 10px; /* Espaciado interno para cada elemento del menú */
+    transition: all 0.4s ease; /* Transición suave para el efecto hover */
+}
+
+.menu-item:hover {
+    font-size: 2.2em; /* Aumenta el tamaño de la fuente al pasar el cursor */
+    color: #39FF14; /* Cambia el color a verde fosforescente */
+}
+
+@media (max-width: 768px) {
+    .menu {
+        width: 100%; /* El menú ocupará todo el ancho en pantallas pequeñas */
+        height: auto; /* Ajusta la altura según el contenido */
+    }
+
+    .content {
+        margin-left: 0; /* Sin margen en pantallas pequeñas */
+    }
+}

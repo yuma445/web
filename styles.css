@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+}
+header {
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(30, 30, 30, 0.8);
+    padding-top: 100px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+}
+
+.sidebar nav ul li {
+    margin: 50px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: gold ;
+}
+
+.main-content {
+    margin-left: 520px;
+}
+
+.slideshow-container {
+    position: relative;
+}
+
+
+/* Animaciones */
+.fade {
+    animation: fade 1s ease-in-out forwards;
+}
+
+@keyframes fade {
+    from {opacity: 10;}
+    to {opacity: 1;}
+}
+
+/* Estilo de los equipos */
+.team-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.team img {
+    width: 200px; /* Ajusta según necesites */
+}
+
+
+
+.menu {
+    width: 450px; /* Ajusta este valor para cambiar el ancho del menú */
+    height: 200vh; /* Asegúrate de que ocupe toda la altura de la ventana */
+    position: fixed; /* Para que se mantenga en su lugar al hacer scroll */
+    overflow-y: auto; /* Permite desplazamiento si hay mucho contenido */
+}
+
+.content {
+    margin-left: 370px; /* Asegúrate de que el contenido principal no esté detrás del menú */
+    padding: 20px;
+}
+
+/* Efecto de hover para los elementos del menú */
+.menu-item {
+    padding: 10px; /* Espaciado interno para cada elemento del menú */
+    transition: all 0.4s ease; /* Transición suave para el efecto hover */
+}
+
+.menu-item:hover {
+    font-size: 2.2em; /* Aumenta el tamaño de la fuente al pasar el cursor */
+    color: #39FF14; /* Cambia el color a verde fosforescente */
+}
+
+@media (max-width: 768px) {
+    .menu {
+        width: 100%; /* El menú ocupará todo el ancho en pantallas pequeñas */
+        height: auto; /* Ajusta la altura según el contenido */
+    }
+
+    .content {
+        margin-left: 0; /* Sin margen en pantallas pequeñas */
+    }
+}
+let slideIndex = 0;
+

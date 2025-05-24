@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página de Fútbol</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="menu">
+<div class="menu-header" onclick="toggleMenu()">Menú</div>
+<div class="menu-items" id="menuItems">
+<div class="menu-item" onclick="loadPage('equipos')">Equipos</div>
+<div class="menu-item" onclick="loadPage('calendario')">Calendario</div>
+<div class="menu-item" onclick="loadPage('torneo')">Torneo</div>
+<div class="menu-item" onclick="loadPage('historico')">Histórico</div>
+<div class="menu-item" onclick="loadPage('noticias')">Noticias</div>
+</div>
+</div>
+
+<div class="content">
+<div class="image-slider">
+<img id="sliderImage" src="image1.jpg" alt="Fútbol" />
+</div>
+<div id="pageContent">
+<!-- Aquí se cargará el contenido de cada sección -->
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

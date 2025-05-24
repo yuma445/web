@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa FUTSAL UCM</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles1.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>COPA FUTSAL UCM</h1>
+    </header>
+<div class="menu">
+	
+</div>
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#equipos" onclick="showSection('equipos')"><div class="menu-item">Equipos</div></a></li>
+                <li><a href="#calendario" onclick="showSection('calendario')"><div class="menu-item">Calendario</div></a></li>
+                <li><a href="#torneo" onclick="showSection('torneo')"><div class="menu-item">Torneo</div></a></li>
+                <li><a href="#historico" onclick="showSection('historico')"><div class="menu-item">Histórico</div></a></li>
+                <li><a href="#noticias" onclick="showSection('noticias')"><div class="menu-item">Noticias</div></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main id="main-content">
+        <section id="home" class="active">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="IMG-20250509-WA0040.jpg" style="width:80%">
+                </div>
+                
+                <!-- Agrega más imágenes aquí -->
+            </div>
+        </section>
+        <section id="equipos" class="hidden">
+            <h2>Equipos</h2>
+            <div class="team-gallery">
+                  <!-- Ejemplo de equipos -->
+                <div class="team" onclick="showTeamStats('JUVENILES')">
+                     <img src="JUVE.png" style="width:20%" alt="JUVENILES">
+			</div>
+			     <div class="team" onclick="showTeamStats('INTER')">
+                     <img src="INTER.png" style="width:20%" alt="INTER">
+                <!-- Agrega más equipos aquí -->
+			</div>
+			     <div class="team" onclick="showTeamStats('equipo4')">
+                     <img src="NUEVA ERA.png" style="width:20%" alt="NUEVA ERA">
+		    </div>
+			     <div class="team" onclick="showTeamStats('equipo4')">
+                    <img src="TIGRES.png" style="width:20%" alt="TIGRES">
+					 
+            <div id="team-stats" class="hidden"></div>
+        </section>
+
+        <section id="calendario" class="hidden">
+            <h2>CALEMDARIO</h2>
+            <p>Aquí se mostrarán los próximos partidos.</p>
+			<img src="goodwp.com-17313.jpg" style="width:20%">
+            <!-- Imágenes del calendario -->
+        </section>
+
+        <section id="torneo" class="hidden">
+            <h2>Torneo</h2>
+            <p>Estadísticas del torneo.</p>
+        </section>
+
+        <section id="historico" class="hidden">
+            <h2>Histórico</h2>
+            <p>Historia de la copa y goleadores.</p>
+        </section>
+
+        <section id="noticias" class="hidden">
+            <h2>noticias</h2>
+            <p>JUVEMILES arrazam com Los tigres</p>
+			<p>IMTER arraza com Los ORUSIA</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>.</p>
+    </footer>
+
+</body>
+</html>

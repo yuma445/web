@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+}
+
+header {
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(30, 30, 30, 0.8);
+    padding-top: 20px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none ;
+}
+
+.main-content {
+    margin-left: 220px;
+}
+
+.slideshow-container {
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+/* Animaciones */
+.fade {
+    animation: fade 1s ease-in-out forwards;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Estilo de los equipos */
+.team-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.team img {
+    width: 100px; /* Ajusta según necesites */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
