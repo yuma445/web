@@ -1,90 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copa FUTSAL UCM</title>
-    <link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="styles1.css">
-    <script src="script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página del Equipo de Fútbol Sala</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+       
+<nav class="navbar">
+<ul>
+<img src="JUVE.png"style="width:3%">
+<li><a href="#inicio">INICIO</a></li>
+<li><a href="#torneo">TORNEO</a></li>
+<li><a href="#equipos">EQUIPOS</a></li>
+<li><a href="#calendario">CALENDARIO</a></li>
+<li><a href="#historicos">HISTÓRICOS</a></li>
 
-    <header>
-        <h1>COPA FUTSAL UCM</h1>
-    </header>
-<div class="menu">
-	
+</ul>
+</nav>
+</header>
+
+
+<main>
+<section id="inicio">
+<div class="carousel">
+<img src="IMG-20250509-WA0041.jpg" alt="IMG-20250509-WA0041" class="carousel-image">
+<!-- Aquí puedes agregar más imágenes -->
 </div>
-    <div class="sidebar">
-        <nav>
-            <ul>
-                <li><a href="#equipos" onclick="showSection('equipos')"><div class="menu-item">Equipos</div></a></li>
-                <li><a href="#calendario" onclick="showSection('calendario')"><div class="menu-item">Calendario</div></a></li>
-                <li><a href="#torneo" onclick="showSection('torneo')"><div class="menu-item">Torneo</div></a></li>
-                <li><a href="#historico" onclick="showSection('historico')"><div class="menu-item">Histórico</div></a></li>
-                <li><a href="#noticias" onclick="showSection('noticias')"><div class="menu-item">Noticias</div></a></li>
-            </ul>
-        </nav>
-    </div>
+</section>
+	 
+<section id="torneo">
+<h2>Estadísticas del Torneo</h2>
+<div class="stats-image">
+<img src="goodwp.com-16261.jpg" alt="Estadísticas del Torneo">
+<button class="change-image">Cambiar Imagen</button>
+</div>
+</section>
 
-    <main id="main-content">
-        <section id="home" class="active">
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="Messi3.jpg" style="width:80%">
-                </div>
-                
-                <!-- Agrega más imágenes aquí -->
-            </div>
-        </section>
-        <section id="equipos" class="hidden">
-            <h2>Equipos</h2>
-            <div class="team-gallery">
-                  <!-- Ejemplo de equipos -->
-                <div class="team" onclick="showTeamStats('JUVENILES')">
-                     <img src="JUVE.png" style="width:20%" alt="JUVENILES">
-			</div>
-			     <div class="team" onclick="showTeamStats('INTER')">
-                     <img src="INTER.png" style="width:20%" alt="INTER">
-                <!-- Agrega más equipos aquí -->
-			</div>
-			     <div class="team" onclick="showTeamStats('equipo4')">
-                     <img src="NUEVA ERA.png" style="width:20%" alt="NUEVA ERA">
-		    </div>
-			     <div class="team" onclick="showTeamStats('equipo4')">
-                    <img src="TIGRES.png" style="width:20%" alt="TIGRES">
-					 
-            <div id="team-stats" class="hidden"></div>
-        </section>
+<section id="equipos">
+<h2>Equipos</h2>
+<div class="team-container">
+<!-- Repite este bloque para cada equipo -->
+<div class="team" onclick="togglePlayers('equipo1')">
+<img src="JUVE.png" alt="Escudo Equipo 1" class="team-logo">
+<div class="players" id="equipo1">
+<p onclick="showStats('YUMA Partidos jugados 2 partidos gamados 2 empates 0  disparos 7 goles 3')">YUMA</p>
+<p onclick="showStats('Abel Partidos jugados 2 partidos gamados 2 empates 0  disparos 3 goles 1 asist 2 ')">Abel</p>
+</div>
+</div>
+</div>
+</section>
+<div class="team-container">
+<!-- Repite este bloque para cada equipo -->
+<div class="team" onclick="togglePlayers('equipo2')">
+<img src="NUEVA ERA.png" alt="Escudo Equipo 2" class="team-logo">
+<div class="players" id="equipo2">
+<p onclick="showStats('YUMA Partidos jugados 2 partidos gamados 2 empates 0  disparos 7 goles 3')">YUMA</p>
+<p onclick="showStats('Abel Partidos jugados 2 partidos gamados 2 empates 0  disparos 3 goles 1 asist 2 ')">Abel</p>
+</div>
+</div>
+</div>
+</section>
+<div class="team-container">
+<!-- Repite este bloque para cada equipo -->
+<div class="team" onclick="togglePlayers('equipo3')">
+<img src="INTER.png" alt="Escudo Equipo 3" class="team-logo">
+<div class="players" id="equipo3">
+<p onclick="showStats('YUMA Partidos jugados 2 partidos gamados 2 empates 0  disparos 7 goles 3')">YUMA</p>
+<p onclick="showStats('Abel Partidos jugados 2 partidos gamados 2 empates 0  disparos 3 goles 1 asist 2 ')">Abel</p>
+</div>
+</div>
+</div>
+</section>
+<div class="team-container">
+<!-- Repite este bloque para cada equipo -->
+<div class="team" onclick="togglePlayers('equipo4')">
+<img src="BORUSIA.png" alt="Escudo Equipo 4" class="team-logo">
+<div class="players" id="equipo4">
+<p onclick="showStats('YUMA Partidos jugados 2 partidos gamados 2 empates 0  disparos 7 goles 3')">YUMA</p>
+<p onclick="showStats('Abel Partidos jugados 2 partidos gamados 2 empates 0  disparos 3 goles 1 asist 2 ')">Abel</p>
+</div>
+</div>
+</div>
+<div class="team-container">
+<!-- Repite este bloque para cada equipo -->
+<div class="team" onclick="togglePlayers('equipo3')">
+<img src="DREAM TEAM.png" alt="Escudo Equipo 5" class="team-logo">
+<div class="players" id="equipo5">
+<p onclick="showStats('YUMA Partidos jugados 2 partidos gamados 2 empates 0  disparos 7 goles 3')">YUMA</p>
+<p onclick="showStats('Abel Partidos jugados 2 partidos gamados 2 empates 0  disparos 3 goles 1 asist 2 ')">Abel</p>
+</div>
+</div>
+</div>
+<div class="team-container">
+<!-- Repite este bloque para cada equipo -->
+<div class="team" onclick="togglePlayers('equipo6')">
+<img src="VETERANOS.png" alt="Escudo Equipo 6" class="team-logo">
+<div class="players" id="equipo6">
+<p onclick="showStats('YUMA Partidos jugados 2 partidos gamados 2 empates 0  disparos 7 goles 3')">YUMA</p>
+<p onclick="showStats('Abel Partidos jugados 2 partidos gamados 2 empates 0  disparos 3 goles 1 asist 2 ')">Abel</p>
+</div>
+</div>
+</div>
+<div class="team-container">
+<!-- Repite este bloque para cada equipo -->
+<div class="team" onclick="togglePlayers('equipo7')">
+<img src="PAKISTAN.png" alt="Escudo Equipo 7" class="team-logo">
+<div class="players" id="equipo7">
+<p onclick="showStats('YUMA Partidos jugados 2 partidos gamados 2 empates 0  disparos 7 goles 3')">YUMA</p>
+<p onclick="showStats('Abel Partidos jugados 2 partidos gamados 2 empates 0  disparos 3 goles 1 asist 2 ')">Abel</p>
+</div>
+</div>
+</div>
+<div class="team-container">
+<!-- Repite este bloque para cada equipo -->
+<div class="team" onclick="togglePlayers('equipo8')">
+<img src="TIGRES.png" alt="Escudo Equipo 8" class="team-logo">
+<div class="players" id="equipo8">
+<p onclick="showStats('YUMA Partidos jugados 2 partidos gamados 2 empates 0  disparos 7 goles 3')">YUMA</p>
+<p onclick="showStats('Abel Partidos jugados 2 partidos gamados 2 empates 0  disparos 3 goles 1 asist 2 ')">Abel</p>
+</div>
+</div>
+</div>
 
-        <section id="calendario" class="hidden">
-            <h2>CALEMDARIO</h2>
-            <p>Aquí se mostrarán los próximos partidos.</p>
-			<img src="goodwp.com-17313.jpg" style="width:20%">
-            <!-- Imágenes del calendario -->
-        </section>
+<section id="calendario">
+<h2>Calendario</h2>
+<div class="calendar-image">
+<img src="calendario.jpg" alt="Calendario">
+<button class="change-image">Cambiar Imagen</button>
+</div>
+</section>
 
-        <section id="torneo" class="hidden">
-            <h2>Torneo</h2>
-            <p>Estadísticas del torneo.</p>
-        </section>
+<section id="historicos">
+<h2>Históricos</h2>
+<div class="historical-images">
+<img src="historico1.jpg" alt="Histórico 1">
+<!-- Aquí puedes agregar más imágenes -->
+</div>
+</section>
+</main>
 
-        <section id="historico" class="hidden">
-            <h2>Histórico</h2>
-            <p>Historia de la copa y goleadores.</p>
-        </section>
+<footer>
+<p>&copy; 2023 Equipo de Fútbol Sala</p>
+</footer>
 
-        <section id="noticias" class="hidden">
-            <h2>noticias</h2>
-            <p>JUVEMILES arrazam com Los tigres</p>
-			<p>IMTER arraza com Los ORUSIA</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>.</p>
-    </footer>
-
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,41 +1,20 @@
-let slideIndex = 0;
-
-function showSlides() {
-    const slides = document.getElementsByClassName("mySlides");
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-
-    slideIndex++;
-
-    if (slideIndex > slides.length) {slideIndex = 1}    
-
-    slides[slideIndex - 1].style.display = "block";  
-    setTimeout(showSlides, 5000); // Cambia cada 5 segundos
+// Función para mostrar u ocultar jugadores
+function togglePlayers(teamId) {
+    const players = document.getElementById(teamId);
+    players.style.display = players.style.display === 'block' ? 'none' : 'block';
 }
 
-function showSection(sectionId) {
-    const sections = document.querySelectorAll("main > section");
-
-    sections.forEach(section => {
-        section.classList.add("hidden");
-        section.classList.remove("active");
-    });
-
-    document.getElementById(sectionId).classList.remove("hidden");
-    document.getElementById(sectionId).classList.add("active");
+// Función para mostrar estadísticas del jugador
+function showStats(playerName) {
+    alert("Estadísticas de " + playerName);
 }
 
-// Simulación de estadísticas de equipo
-function showTeamStats(team) {
-    const statsDiv = document.getElementById("team-stats");
+// Carrusel de imágenes
+let currentImageIndex = 0;
+const images = ['IMG-20250509-WA0040.jpg','IMG-20250327-WA0062.jpg', 'IMG-20250509-WA0041.jpg', 'IMG-20250329-WA0003.jpg', 'IMG-20250329-WA0020.jpg']; // Agrega tus imágenes aquí
 
-    // Aquí puedes agregar lógica para mostrar estadísticas del equipo seleccionado
-    statsDiv.innerHTML = <h3>Estadísticas de ${team}</h3><p>Partidos jugados, ganados, perdidos...</p>;
-
-    statsDiv.classList.remove("hidden");
-}
-
-// Iniciar el slideshow
-showSlides();
+setInterval(() => {
+    const carouselImage = document.querySelector('.carousel-image');
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    carouselImage.src = images[currentImageIndex];
+}, 5000); // Cambia cada 5 segundos
